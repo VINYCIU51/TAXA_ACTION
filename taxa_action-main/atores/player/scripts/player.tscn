@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cif5dm1q5e6m7"]
+
+[ext_resource type="Script" uid="uid://dfnq44cl63oka" path="res://atores/player/scripts/player_script.gd" id="1_f5d7h"]
+[ext_resource type="Texture2D" uid="uid://e2cl8tcu2d4g" path="res://atores/player/assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight.png" id="2_f5d7h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgx0x"]
+atlas = ExtResource("2_f5d7h")
+region = Rect2(64, 0, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovnk7"]
+atlas = ExtResource("2_f5d7h")
+region = Rect2(96, 0, 32, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2geyu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgx0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovnk7")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovnk7"]
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_f5d7h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(27, 19)
+sprite_frames = SubResource("SpriteFrames_2geyu")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 1
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(26, 19)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_ovnk7")
