@@ -4,9 +4,13 @@ extends CharacterBody2D
 
 const SPEED := 250
 const DEATH_HEIGHT := 1000
+const DASH_SPEED := 1000
+const DASH_DURATION := 0.15
 
 var life := 3
-var is_dead := false
+
+var direction
+var dash_timer := 0.0
 
 var jump_height := 96
 var time_to_top_height := 0.5
@@ -14,10 +18,11 @@ var jump_velocity
 var gravity
 var fall_gravity
 
-var direction
-
+var is_invencible := false
+var is_dead := false
 var taked_damage = false
 var is_jumping = false
+var is_dashing = false
 
 func _ready():
 	jump_velocity = (jump_height*2) / time_to_top_height
@@ -50,6 +55,18 @@ func _physics_process(delta):
 			velocity.y += gravity * delta
 		else:
 			velocity.y += fall_gravity * delta
+			
+	if Input.is_action_just_pressed("dash") and direction != 0:
+		is_dashing = true
+		dash_timer = DASH_DURATION
+		
+	if is_dashing:
+		velocity.x = direction * DASH_SPEED
+		dash_timer -= delta
+		is_invencible = true
+		if dash_timer <= 0:
+			is_dashing = false
+			is_invencible = false
 
 	#if is_jumping:
 		#if not animation.is_playing() and is_on_floor():
@@ -75,6 +92,10 @@ func fall_out():
 	get_tree().reload_current_scene()
 	
 func take_damage():
+	
+	if is_invencible:
+		return
+		
 	taked_damage = true
 	life -= 1
 	
