@@ -1,16 +1,18 @@
 extends CharacterBody2D
 
-#@onready var animation := $animation as AnimationPlayer
+@onready var animation := $animation as AnimationPlayer
 
 const SPEED := 250
 const DEATH_HEIGHT := 1000
 const DASH_SPEED := 1000
 const DASH_DURATION := 0.15
+const  INVENCIBLE_DURATION := 1.0
 
 var life := 3
 
 var direction
 var dash_timer := 0.0
+var invencible_timer := 0.0
 
 var jump_height := 96
 var time_to_top_height := 0.5
@@ -47,7 +49,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_velocity
-		#animation.play("jump")
+		animation.play("jump")
 		is_jumping = true
 
 	if not is_on_floor():
@@ -57,6 +59,7 @@ func _physics_process(delta):
 			velocity.y += fall_gravity * delta
 			
 	if Input.is_action_just_pressed("dash") and direction != 0:
+		animation.play("dash")
 		is_dashing = true
 		dash_timer = DASH_DURATION
 		
@@ -64,25 +67,37 @@ func _physics_process(delta):
 		velocity.x = direction * DASH_SPEED
 		dash_timer -= delta
 		is_invencible = true
+		
 		if dash_timer <= 0:
 			is_dashing = false
 			is_invencible = false
 
-	#if is_jumping:
-		#if not animation.is_playing() and is_on_floor():
-			#is_jumping = false
-		#move_and_slide()
-		#return
+	if is_jumping:
+		if not animation.is_playing() and is_on_floor():
+			is_jumping = false
+		move_and_slide()
+		return
 		
-	#if taked_damage:
-		#velocity.x = 0
+	if is_dashing:
+		if not animation.is_playing():
+			is_dashing = false
+		move_and_slide()
+		return
+		
+	if taked_damage:
+		velocity.x = 0
+		invencible_timer -= delta
+		
+		if invencible_timer <= 0:
+			is_invencible = false
+		
 		#if not animation.is_playing():
 			#taked_damage = false
 		#move_and_slide()
-		#return
+		return
 
-	#if direction != 0:
-		#animation.play("walk")
+	if direction != 0:
+		animation.play("run")
 	#else:
 		#animation.play("idle")
 
