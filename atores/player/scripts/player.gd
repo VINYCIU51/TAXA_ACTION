@@ -49,7 +49,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_velocity
-		animation.play("jump")
+		#animation.play("jump")
 		is_jumping = true
 
 	if not is_on_floor():
@@ -59,7 +59,7 @@ func _physics_process(delta):
 			velocity.y += fall_gravity * delta
 			
 	if Input.is_action_just_pressed("dash") and direction != 0:
-		animation.play("dash")
+		#animation.play("dash")
 		is_dashing = true
 		dash_timer = DASH_DURATION
 		
@@ -96,8 +96,8 @@ func _physics_process(delta):
 		#move_and_slide()
 		return
 
-	if direction != 0:
-		animation.play("run")
+	#if direction != 0:
+		#animation.play("run")
 	#else:
 		#animation.play("idle")
 
