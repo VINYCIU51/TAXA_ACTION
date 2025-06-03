@@ -945,7 +945,7 @@ sources/5 = SubResource("TileSetAtlasSource_24qp4")
 [node name="Tutorial" type="Node2D"]
 
 [node name="Cave_background" parent="." instance=ExtResource("1_23wv8")]
-position = Vector2(1, 40)
+position = Vector2(-5, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-127, 452)
