@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://hvv2dln6ppxs"]
 
 [ext_resource type="Script" uid="uid://diyn4ec60xq5j" path="res://atores/player/scripts/player.gd" id="1_dfvd0"]
-[ext_resource type="Texture2D" uid="uid://dq2axgisl3ylv" path="res://atores/player/assets/idle.png" id="2_pnti8"]
+[ext_resource type="Texture2D" uid="uid://yfq5nxx1fjfd" path="res://atores/player/assets/idle.png" id="2_pnti8"]
 [ext_resource type="Script" uid="uid://ckap8nvxw1wa7" path="res://atores/player/scripts/hurtbox.gd" id="3_jgmj0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfvd0"]
