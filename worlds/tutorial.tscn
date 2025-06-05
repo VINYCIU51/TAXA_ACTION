@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctu2bgmcxsyxj"]
+[gd_scene load_steps=6 format=3 uid="uid://ctu2bgmcxsyxj"]
 
 [ext_resource type="PackedScene" uid="uid://cgvarvp2iof5x" path="res://worlds/tutorial/assets/Background/Parallax caverna.tscn" id="1_23wv8"]
 [ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://tutorial_map.tscn" id="2_a7h62"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_a7h62"]
+[ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://worlds/Next_level/next_level.tscn" id="4_23wv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23wv8"]
 size = Vector2(12, 1076)
@@ -26,3 +27,8 @@ shape = SubResource("RectangleShape2D_23wv8")
 
 [node name="player" parent="." instance=ExtResource("3_a7h62")]
 position = Vector2(7, -8)
+
+[node name="NextLevel" parent="." instance=ExtResource("4_23wv8")]
+position = Vector2(3606, 206)
+scale = Vector2(3, 3)
+next_scene = "Level 1"

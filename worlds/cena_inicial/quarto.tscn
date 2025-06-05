@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjcyt6f466nit"]
+
+[ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://tutorial_map.tscn" id="1_2tgla"]
+[ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://worlds/Next_level/next_level.tscn" id="2_vbyns"]
+[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_vbyns"]
+
+[node name="Quarto" type="Node2D"]
+position = Vector2(-35, 26)
+
+[node name="chao_pedras" parent="." instance=ExtResource("1_2tgla")]
+position = Vector2(34, 307)
+
+[node name="NextLevel" parent="." instance=ExtResource("2_vbyns")]
+position = Vector2(258, 290)
+next_scene = "Level 2"
+
+[node name="player" parent="." instance=ExtResource("3_vbyns")]
+position = Vector2(53, 241)
