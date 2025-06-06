@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://hvv2dln6ppxs"]
 
 [ext_resource type="Script" uid="uid://diyn4ec60xq5j" path="res://atores/player/scripts/player.gd" id="1_dfvd0"]
-[ext_resource type="Texture2D" uid="uid://yfq5nxx1fjfd" path="res://atores/player/assets/idle.png" id="2_pnti8"]
+[ext_resource type="Texture2D" uid="uid://dj4kflhwxr6yk" path="res://atores/player/assets/idle.png" id="2_pnti8"]
 [ext_resource type="Script" uid="uid://ckap8nvxw1wa7" path="res://atores/player/scripts/hurtbox.gd" id="3_jgmj0"]
-[ext_resource type="Texture2D" uid="uid://ba15o0wrbm8mv" path="res://atores/player/assets/Running.png" id="3_oewvs"]
-[ext_resource type="Texture2D" uid="uid://laqokawcfbwr" path="res://atores/player/assets/Gliding_Jump.png" id="4_txlcu"]
-[ext_resource type="Texture2D" uid="uid://c2mf3f46uf0ps" path="res://atores/player/assets/Jumping.png" id="5_bv204"]
+[ext_resource type="Texture2D" uid="uid://dyxojkpuckbbv" path="res://atores/player/assets/Running.png" id="3_oewvs"]
+[ext_resource type="Texture2D" uid="uid://x8bjvuvie06a" path="res://atores/player/assets/Gliding_Jump.png" id="4_txlcu"]
+[ext_resource type="Texture2D" uid="uid://0dkl2imj5o0x" path="res://atores/player/assets/Jumping.png" id="5_bv204"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfvd0"]
 size = Vector2(13, 21)

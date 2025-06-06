@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://cgvarvp2iof5x"]
 
-[ext_resource type="Texture2D" uid="uid://ddjr557mma4wv" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/1.png" id="1_kn0su"]
-[ext_resource type="Texture2D" uid="uid://bn6falu7p2jos" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/2.png" id="2_rap1x"]
-[ext_resource type="Texture2D" uid="uid://cq4y106xgom0m" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/3fx.png" id="3_aow5c"]
-[ext_resource type="Texture2D" uid="uid://btkmu7x2847es" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/4.png" id="4_rdaqu"]
-[ext_resource type="Texture2D" uid="uid://ds388tlkplfgq" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/5.png" id="5_tfwc0"]
-[ext_resource type="Texture2D" uid="uid://g7ch20k1ppk8" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/6fx.png" id="6_ygxj6"]
-[ext_resource type="Texture2D" uid="uid://d2vb4ldtf7h3d" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/7.png" id="7_8tmfu"]
-[ext_resource type="Texture2D" uid="uid://cpipgsukvh2p8" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/8fx.png" id="8_33gn5"]
-[ext_resource type="Texture2D" uid="uid://dy81umh35iob4" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/9.png" id="9_6cf3j"]
+[ext_resource type="Texture2D" uid="uid://xlvnjmcrf7kg" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/1.png" id="1_kn0su"]
+[ext_resource type="Texture2D" uid="uid://bwedsqu0pfp4i" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/2.png" id="2_rap1x"]
+[ext_resource type="Texture2D" uid="uid://dh21gayy1g6ep" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/3fx.png" id="3_aow5c"]
+[ext_resource type="Texture2D" uid="uid://co8ia11w5jyly" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/4.png" id="4_rdaqu"]
+[ext_resource type="Texture2D" uid="uid://dvvoer2lb8ygj" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/5.png" id="5_tfwc0"]
+[ext_resource type="Texture2D" uid="uid://cou1upskik17f" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/6fx.png" id="6_ygxj6"]
+[ext_resource type="Texture2D" uid="uid://poocycy5d0ur" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/7.png" id="7_8tmfu"]
+[ext_resource type="Texture2D" uid="uid://cwhwu1l84pgpb" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/8fx.png" id="8_33gn5"]
+[ext_resource type="Texture2D" uid="uid://bfu5tgm2w25ra" path="res://worlds/tutorial/assets tutorial/Background/background_parallax_cave/9.png" id="9_6cf3j"]
 
 [node name="background cave" type="Node2D"]
 
