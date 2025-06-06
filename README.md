@@ -95,7 +95,7 @@ godot4 .
 
 | Nome              | Função                                   | GitHub                                   |
 |-------------------|-----------------------------------------|------------------------------------------|
-| Kayki Ivan        | Programação e Mecânicas                  | [xFrostzss](https://github.com/xFrostzss)   |
+| Kayki Ivan        | Programação e Mecânicas                  | [sh1ftx](https://github.com/sh1ftx)   |
 | Gleison Oliveira  | Game Design e Level Design                | [gleiSUN](https://github.com/gleiSUN)        |
 | Kayky Rodrigues   | Design Gráfico / Arte, Animações e Efeitos Visuais | [xFrostzss](https://github.com/xFrostzss)   |
 | Vinycius Huellyson| Programação                             | [VINYCIU51](https://github.com/VINYCIU51)   |
