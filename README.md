@@ -92,13 +92,15 @@ godot4 .
 
  ## Integrantes do Projeto
 
-| Nome           | Função             | GitHub                                      |
-|----------------|--------------------|---------------------------------------------|
-| Vinicius Silva | Programação & Design| [VINYCIU51](https://github.com/VINYCIU51)  |
-| Kayki          | Programação & Mecânicas | [kayki](https://github.com/kayki)           |
-| Luana Martins  | Arte & Animação    | [luanamartins](https://github.com/luanamartins) |
-| Rafael Souza   | Som & Música       | [rafaelsouza](https://github.com/rafaelsouza)  |
-
+```
+| Nome              | Função                                   | GitHub                                   |
+|-------------------|-----------------------------------------|------------------------------------------|
+| Kayki Ivan        | Programação e Mecânicas                  | [xFrostzss](https://github.com/xFrostzss)   |
+| Gleison Oliveira  | Game Design e Level Design                | [gleiSUN](https://github.com/gleiSUN)        |
+| Kayky Rodrigues   | Design Gráfico / Arte, Animações e Efeitos Visuais | [xFrostzss](https://github.com/xFrostzss)   |
+| Vinycius Huellyson| Programação                             | [VINYCIU51](https://github.com/VINYCIU51)   |
+| Fernando da Silva | Áudio e Interface (UI, UX)               | [FernandosenaDev](https://github.com/FernandosenaDev) |
+```
 ---
 
 # Considerações Finais
