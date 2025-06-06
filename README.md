@@ -92,7 +92,7 @@ godot4 .
 
  ## Integrantes do Projeto
 
-```
+
 | Nome              | Função                                   | GitHub                                   |
 |-------------------|-----------------------------------------|------------------------------------------|
 | Kayki Ivan        | Programação e Mecânicas                  | [xFrostzss](https://github.com/xFrostzss)   |
@@ -100,7 +100,7 @@ godot4 .
 | Kayky Rodrigues   | Design Gráfico / Arte, Animações e Efeitos Visuais | [xFrostzss](https://github.com/xFrostzss)   |
 | Vinycius Huellyson| Programação                             | [VINYCIU51](https://github.com/VINYCIU51)   |
 | Fernando da Silva | Áudio e Interface (UI, UX)               | [FernandosenaDev](https://github.com/FernandosenaDev) |
-```
+
 ---
 
 # Considerações Finais
