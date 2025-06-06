@@ -8,14 +8,10 @@
                                                                    
 ```
 
-## Infos:
 
 ![status](https://img.shields.io/badge/status-em%20desenvolvimento-yellowgreen?style=for-the-badge)
 ![arquitetura](https://img.shields.io/badge/arquitetura-modular-blueviolet?style=for-the-badge)
 ![metodologia](https://img.shields.io/badge/metodologia-Ágil%20Scrum-orange?style=for-the-badge)
-
-## Ferramentas:
-
 ![Godot](https://img.shields.io/badge/Godot-4.0-blue?style=for-the-badge&logo=godot-engine&logoColor=white)
 ![GDScript](https://img.shields.io/badge/GDScript-2.0-6bc5ff?style=for-the-badge&logo=godot-engine&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-version_control-red?style=for-the-badge&logo=git&logoColor=white)
