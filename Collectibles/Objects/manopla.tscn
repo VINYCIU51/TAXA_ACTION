@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj41h6wqempxg"]
+
+[ext_resource type="Script" uid="uid://dhqqaduy3dl15" path="res://Collectibles/Objects/manopla.gd" id="1_1c1f6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjujl"]
+
+[node name="Manopla" type="Node2D"]
+script = ExtResource("1_1c1f6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="manopla" type="Area2D" parent="." groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="manopla"]
+shape = SubResource("CapsuleShape2D_sjujl")
+
+[connection signal="body_entered" from="manopla" to="." method="_on_manopla_body_entered"]
+[connection signal="body_entered" from="manopla" to="." method="_on_area_2d_body_entered"]

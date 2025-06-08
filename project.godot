@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GerenciadorDeCenas="*res://scripts/gerenciador_de_cenas.gd"
+UpgradeManager="*res://scripts/UpgradeManager.gd"
 
 [display]
 
