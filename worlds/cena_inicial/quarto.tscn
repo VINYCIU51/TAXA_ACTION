@@ -8,7 +8,8 @@
 [node name="Quarto" type="Node2D"]
 
 [node name="BackgroundParallax" parent="." instance=ExtResource("1_tc1lh")]
-position = Vector2(783, -49)
+z_index = -4
+position = Vector2(779, -53)
 
 [node name="NextLevel" parent="." instance=ExtResource("2_vbyns")]
 position = Vector2(577, 57)
@@ -19,5 +20,5 @@ next_scene = "Level 2"
 position = Vector2(26, -37)
 
 [node name="QuartoTilesets" parent="." instance=ExtResource("4_pgbju")]
-position = Vector2(9, 87)
+position = Vector2(9, 82)
 scale = Vector2(1.2, 1.2)
