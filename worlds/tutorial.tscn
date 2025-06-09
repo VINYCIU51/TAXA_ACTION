@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ctu2bgmcxsyxj"]
 
-[ext_resource type="PackedScene" uid="uid://cgvarvp2iof5x" path="res://worlds/tutorial/assets/Background/Parallax caverna.tscn" id="1_23wv8"]
+[ext_resource type="PackedScene" uid="uid://ddh1g3plyogiv" path="res://worlds/tutorial/Parallax caverna.tscn" id="1_23wv8"]
 [ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://tutorial_map.tscn" id="2_a7h62"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_a7h62"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://worlds/Next_level/next_level.tscn" id="4_23wv8"]
