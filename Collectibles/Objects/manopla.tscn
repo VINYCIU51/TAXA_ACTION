@@ -14,5 +14,5 @@ script = ExtResource("1_1c1f6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="manopla"]
 shape = SubResource("CapsuleShape2D_sjujl")
 
-[connection signal="body_entered" from="manopla" to="." method="_on_manopla_body_entered"]
 [connection signal="body_entered" from="manopla" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="manopla" to="." method="_on_manopla_body_entered"]

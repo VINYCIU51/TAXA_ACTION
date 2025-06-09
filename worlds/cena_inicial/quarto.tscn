@@ -1,18 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjcyt6f466nit"]
+[gd_scene load_steps=5 format=3 uid="uid://cjcyt6f466nit"]
 
-[ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://tutorial_map.tscn" id="1_2tgla"]
+[ext_resource type="PackedScene" uid="uid://b7m3nwa37xe6o" path="res://worlds/cena_inicial/parallax_quarto.tscn" id="1_tc1lh"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://worlds/Next_level/next_level.tscn" id="2_vbyns"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_vbyns"]
+[ext_resource type="PackedScene" uid="uid://bsvxhobdh7503" path="res://worlds/cena_inicial/quarto_tilesets.tscn" id="4_pgbju"]
 
 [node name="Quarto" type="Node2D"]
-position = Vector2(-35, 26)
 
-[node name="chao_pedras" parent="." instance=ExtResource("1_2tgla")]
-position = Vector2(34, 307)
+[node name="BackgroundParallax" parent="." instance=ExtResource("1_tc1lh")]
+position = Vector2(783, -49)
 
 [node name="NextLevel" parent="." instance=ExtResource("2_vbyns")]
-position = Vector2(258, 290)
+position = Vector2(577, 57)
+scale = Vector2(2, 2)
 next_scene = "Level 2"
 
 [node name="player" parent="." instance=ExtResource("3_vbyns")]
-position = Vector2(53, 241)
+position = Vector2(26, -37)
+
+[node name="QuartoTilesets" parent="." instance=ExtResource("4_pgbju")]
+position = Vector2(9, 87)
+scale = Vector2(1.2, 1.2)
