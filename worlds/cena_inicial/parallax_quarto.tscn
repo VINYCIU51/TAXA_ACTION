@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7m3nwa37xe6o"]
+
+[ext_resource type="Texture2D" uid="uid://bak36fc6n55th" path="res://worlds/cena_inicial/assets/background/1.png" id="1_r3y1i"]
+[ext_resource type="Texture2D" uid="uid://bs3nwq348rtqi" path="res://worlds/cena_inicial/assets/background/2.png" id="2_l3itu"]
+[ext_resource type="Texture2D" uid="uid://byn2ywl8p3hwh" path="res://worlds/cena_inicial/assets/background/3.png" id="3_4vevo"]
+[ext_resource type="Texture2D" uid="uid://cnnrphs84i42k" path="res://worlds/cena_inicial/assets/background/4.png" id="4_5kw1r"]
+[ext_resource type="Texture2D" uid="uid://by2mpovhaxt3w" path="res://worlds/cena_inicial/assets/background/5.png" id="5_b3y7w"]
+
+[node name="parallax_quarto" type="Node2D"]
+
+[node name="nuvens" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(500, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="nuvens"]
+texture = ExtResource("1_r3y1i")
+
+[node name="silhouetas" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(500, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="silhouetas"]
+texture = ExtResource("2_l3itu")
+
+[node name="predios_distantes" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(500, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="predios_distantes"]
+texture = ExtResource("3_4vevo")
+
+[node name="predios_medios" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(500, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="predios_medios"]
+texture = ExtResource("4_5kw1r")
+
+[node name="predios_proximos" type="Parallax2D" parent="."]
+repeat_size = Vector2(500, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="predios_proximos"]
+texture = ExtResource("5_b3y7w")
