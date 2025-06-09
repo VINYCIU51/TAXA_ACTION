@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj41h6wqempxg"]
 
 [ext_resource type="Script" uid="uid://dhqqaduy3dl15" path="res://Collectibles/Objects/manopla.gd" id="1_1c1f6"]
-[ext_resource type="Texture2D" uid="uid://cpihjen3o53u7" path="res://Collectibles/assets/Item__62.png" id="2_sjujl"]
+[ext_resource type="Texture2D" uid="uid://bheghum4aik1u" path="res://Collectibles/assets/Item__62.png" id="2_sjujl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjujl"]
 radius = 11.0
