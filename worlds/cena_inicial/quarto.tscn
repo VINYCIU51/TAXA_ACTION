@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjcyt6f466nit"]
+[gd_scene load_steps=5 format=3 uid="uid://cjcyt6f466nit"]
 
 [ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://tutorial_map.tscn" id="1_2tgla"]
+[ext_resource type="PackedScene" uid="uid://cumeko2b8sngw" path="res://menuprincipal/pausa.tscn" id="1_tc1lh"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://worlds/Next_level/next_level.tscn" id="2_vbyns"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_vbyns"]
 
@@ -16,3 +17,16 @@ next_scene = "Level 2"
 
 [node name="player" parent="." instance=ExtResource("3_vbyns")]
 position = Vector2(53, 241)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause" parent="." instance=ExtResource("1_tc1lh")]
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 234.0
+offset_top = 231.0
+offset_right = 251.0
+offset_bottom = 231.0
