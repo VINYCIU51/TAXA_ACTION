@@ -1,11 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjcyt6f466nit"]
 
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://tutorial_map.tscn" id="1_2tgla"]
-[ext_resource type="PackedScene" uid="uid://cumeko2b8sngw" path="res://menuprincipal/pausa.tscn" id="1_tc1lh"]
-=======
 [ext_resource type="PackedScene" uid="uid://b7m3nwa37xe6o" path="res://worlds/cena_inicial/parallax_quarto.tscn" id="1_tc1lh"]
->>>>>>> origin/main
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://worlds/Next_level/next_level.tscn" id="2_vbyns"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_vbyns"]
 [ext_resource type="PackedScene" uid="uid://bsvxhobdh7503" path="res://worlds/cena_inicial/quarto_tilesets.tscn" id="4_pgbju"]
@@ -22,25 +17,8 @@ scale = Vector2(2, 2)
 next_scene = "Level 2"
 
 [node name="player" parent="." instance=ExtResource("3_vbyns")]
-<<<<<<< HEAD
-position = Vector2(53, 241)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="pause" parent="." instance=ExtResource("1_tc1lh")]
-anchors_preset = -1
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 234.0
-offset_top = 231.0
-offset_right = 251.0
-offset_bottom = 231.0
-=======
 position = Vector2(26, -37)
 
 [node name="QuartoTilesets" parent="." instance=ExtResource("4_pgbju")]
 position = Vector2(9, 82)
 scale = Vector2(1.2, 1.2)
->>>>>>> origin/main

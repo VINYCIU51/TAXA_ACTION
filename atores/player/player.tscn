@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://gkhbgo55eaaq"]
 
 [ext_resource type="Script" uid="uid://cfgvc2o2ynohg" path="res://atores/player/scripts/player.gd" id="1_f5d7h"]
-[ext_resource type="Texture2D" uid="uid://bvp4h5i84drxr" path="res://atores/player/assets/idle.png" id="1_v76d8"]
+[ext_resource type="Texture2D" uid="uid://152kqchdlcrf" path="res://atores/player/assets/idle.png" id="1_v76d8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31m4k"]
 size = Vector2(11.5, 16)

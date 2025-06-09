@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=4 uid="uid://dfogf5rl7umr5"]
 
-[ext_resource type="Texture2D" uid="uid://c25sijqr2fd3b" path="res://worlds/tutorial/assets/Tilsets_caverna/CaveBG.png" id="1_eput7"]
-[ext_resource type="Texture2D" uid="uid://45etjg4cy1lo" path="res://worlds/tutorial/assets/Tilsets_caverna/CaveG.png" id="2_t0na0"]
-[ext_resource type="Texture2D" uid="uid://bsjg260uspupa" path="res://worlds/tutorial/assets/PixelFantasy_caves/props1.png" id="3_tsk1l"]
-[ext_resource type="Texture2D" uid="uid://b2rvron27qetl" path="res://worlds/tutorial/assets/PixelFantasy_caves/mainlev_build.png" id="4_8one7"]
+[ext_resource type="Texture2D" uid="uid://d0nheq3t81s16" path="res://worlds/tutorial/assets/Tilsets_caverna/CaveBG.png" id="1_eput7"]
+[ext_resource type="Texture2D" uid="uid://bp1ymffq5nsld" path="res://worlds/tutorial/assets/Tilsets_caverna/CaveG.png" id="2_t0na0"]
+[ext_resource type="Texture2D" uid="uid://bj61gvvo8tijp" path="res://worlds/tutorial/assets/PixelFantasy_caves/props1.png" id="3_tsk1l"]
+[ext_resource type="Texture2D" uid="uid://bwbn6m3u6mqfn" path="res://worlds/tutorial/assets/PixelFantasy_caves/mainlev_build.png" id="4_8one7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tsk1l"]
 texture = ExtResource("1_eput7")
