@@ -11,10 +11,12 @@ size = Vector2(12, 1076)
 [node name="Tutorial" type="Node2D"]
 
 [node name="background cave" parent="." instance=ExtResource("1_23wv8")]
+position = Vector2(1238, -110)
+scale = Vector2(0.4, 0.4)
 
 [node name="TileMapLayer" parent="." instance=ExtResource("2_a7h62")]
-position = Vector2(4, 424)
-scale = Vector2(1, 1)
+position = Vector2(-8, 55)
+scale = Vector2(0.6, 0.6)
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, 2)
@@ -26,9 +28,9 @@ position = Vector2(-6, -3)
 shape = SubResource("RectangleShape2D_23wv8")
 
 [node name="player" parent="." instance=ExtResource("3_a7h62")]
-position = Vector2(7, -8)
+position = Vector2(21, -92)
 
 [node name="NextLevel" parent="." instance=ExtResource("4_23wv8")]
-position = Vector2(3606, 206)
+position = Vector2(2209, -104)
 scale = Vector2(3, 3)
 next_scene = "Level 1"

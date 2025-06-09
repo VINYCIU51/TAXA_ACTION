@@ -33,6 +33,17 @@ func _ready():
 	jump_velocity = (jump_height * 2) / time_to_top_height
 	gravity = (jump_height * 2) / pow(time_to_top_height, 2)
 	fall_gravity = gravity * 2
+	#add depois
+	#if UpgradeManager.upgrades["dash_enabled"]:
+		#enable_dash()
+	#if UpgradeManager.upgrades["shoot_enabled"]:
+		#enable_shoot()
+
+#func enable_dash():
+	#dash_active = true
+
+#func enable_shoot():
+	#shoot_active = true
 
 func _physics_process(delta):
 	if global_position.y > DEATH_HEIGHT:
@@ -67,10 +78,16 @@ func _physics_process(delta):
 		is_air_shooting = true
 		shoot(sign($bullet_point.position.x), 0.3)
 
+	#adicionar dps
+	#if shoot_active == true and Input.is_action_just_pressed("right_click"):
+	
 	# Tiro no chão
 	if is_on_floor() and Input.is_action_just_pressed("right_click") and !is_shooting:
 		is_shooting = true
 		shoot(sign($bullet_point.position.x))
+	
+	#adicionar dps
+	#if dash_active == true and Input.is_action_just_pressed("dash"):
 		
 	if Input.is_action_just_pressed("dash") and direction != 0:
 		is_dashing = true
