@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cumeko2b8sngw"]
 
-[ext_resource type="FontFile" uid="uid://eatumvgwid12" path="res://menuprincipal/SuperMario256.ttf" id="1_dtnkm"]
+[ext_resource type="FontFile" uid="uid://dynayxc6pcvey" path="res://menuprincipal/SuperMario256.ttf" id="1_dtnkm"]
 [ext_resource type="Script" uid="uid://88455o0paq45" path="res://menuprincipal/pausa.gd" id="1_sgog6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4duoc"]
