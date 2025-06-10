@@ -5,9 +5,9 @@ extends CharacterBody2D
 @onready var blink_timer := $blink_timer
 
 const BULLET := preload("res://atores/player/projectiles/bullet.tscn")
-const SPEED := 250
+const SPEED := 200
 const DEATH_HEIGHT := 500
-const DASH_SPEED := 1000
+const DASH_SPEED := 700
 const DASH_DURATION := 0.15
 
 var life := 3

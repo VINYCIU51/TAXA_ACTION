@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cipb32echbko6"]
 
 [ext_resource type="Script" uid="uid://dq1so0uvqttqu" path="res://atores/player/scripts/bullet.gd" id="1_0crhj"]
-[ext_resource type="Texture2D" uid="uid://braw7p61b7gwg" path="res://atores/player/assets/player.png" id="2_jn1k3"]
+[ext_resource type="Texture2D" uid="uid://dr2y8ik74fgj5" path="res://atores/player/projectiles/11.png" id="2_0crhj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57s0u"]
 
@@ -11,7 +11,9 @@ collision_mask = 0
 script = ExtResource("1_0crhj")
 
 [node name="sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_jn1k3")
+position = Vector2(0.75, -1.5)
+scale = Vector2(0.134538, 0.118056)
+texture = ExtResource("2_0crhj")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_57s0u")
