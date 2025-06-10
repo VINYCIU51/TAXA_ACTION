@@ -12,7 +12,7 @@ z_index = -4
 position = Vector2(779, -53)
 
 [node name="NextLevel" parent="." instance=ExtResource("2_vbyns")]
-position = Vector2(577, 57)
+position = Vector2(579, 47)
 scale = Vector2(2, 2)
 next_scene = "Level 2"
 

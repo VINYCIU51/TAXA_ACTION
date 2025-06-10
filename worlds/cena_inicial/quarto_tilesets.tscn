@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://bsvxhobdh7503"]
 
-[ext_resource type="Texture2D" uid="uid://bu1dii48525l8" path="res://worlds/cena_inicial/assets/Tilesetv3.png" id="1_1fayc"]
-[ext_resource type="Texture2D" uid="uid://cxhnn2gbnppmo" path="res://worlds/cena_inicial/assets/Medieval_tiles_free_2.0.png" id="2_dx8j3"]
-[ext_resource type="Texture2D" uid="uid://c84itcnpssw8i" path="res://worlds/cena_inicial/assets/chao_parede.png" id="3_dx8j3"]
+[ext_resource type="Texture2D" uid="uid://dqdy18tey8lut" path="res://worlds/cena_inicial/assets/Tilesetv3.png" id="1_1fayc"]
+[ext_resource type="Texture2D" uid="uid://cu0ndf78ybu8h" path="res://worlds/cena_inicial/assets/Medieval_tiles_free_2.0.png" id="2_dx8j3"]
+[ext_resource type="Texture2D" uid="uid://bpuq3pxs5ia8u" path="res://worlds/cena_inicial/assets/chao_parede.png" id="3_dx8j3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8c4p"]
 texture = ExtResource("1_1fayc")

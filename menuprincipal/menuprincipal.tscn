@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cufsyly0dkfh0"]
 
-[ext_resource type="Script" uid="uid://vctk1hswv1f5" path="res://menuprincipal/menuprincipal.gd" id="1_bwduy"]
-[ext_resource type="Texture2D" uid="uid://bpyt05j625tr0" path="res://menuprincipal/01.jpg" id="2_xejgk"]
-[ext_resource type="FontFile" uid="uid://dynayxc6pcvey" path="res://menuprincipal/SuperMario256.ttf" id="3_nc8at"]
+[ext_resource type="Script" path="res://menuprincipal/menuprincipal.gd" id="1_bwduy"]
+[ext_resource type="Texture2D" uid="uid://b5ygu8ivip7ix" path="res://menuprincipal/01.jpg" id="2_xejgk"]
+[ext_resource type="FontFile" uid="uid://da18fc0susjta" path="res://menuprincipal/SuperMario256.ttf" id="3_nc8at"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s16su"]
 texture = ExtResource("2_xejgk")
