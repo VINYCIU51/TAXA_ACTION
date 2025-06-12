@@ -1,7 +1,9 @@
 extends Node
 
-var cenas : Dictionary = {"Level 1":"res://worlds/cena_inicial/quarto.tscn",
-						  "Level 2": "res://worlds/tutorial.tscn"}
+var cenas : Dictionary = {"Menu_principal":"res://menuprincipal/menuprincipal.tscn",
+						  "Level 1":"res://worlds/cena_inicial/quarto.tscn",
+						  "Level 2": "res://worlds/tutorial.tscn"
+}
 
 func transition_to_scene(level : String):
 	var scene_path : String = cenas.get(level)
