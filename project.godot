@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="TAXA_ACTION"
-run/main_scene="uid://cufsyly0dkfh0"
+run/main_scene="uid://bqs06fiwy1f0e"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
