@@ -6,8 +6,13 @@ var cenas : Dictionary = {"Menu_principal":"res://menuprincipal/menuprincipal.ts
 }
 
 func transition_to_scene(level : String):
-	var scene_path : String = cenas.get(level)
+	var scene_path :String = cenas.get(level)
 	
 	if scene_path != null:
-		await get_tree().create_timer(1.0).timeout
+		await LoadingScreen.show_loading()
+		
 		get_tree().change_scene_to_file(scene_path)
+
+		await get_tree().process_frame
+
+		await LoadingScreen.hide_loading()
