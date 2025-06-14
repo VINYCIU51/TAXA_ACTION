@@ -11,7 +11,7 @@ func set_direction(direct):
 	$sprite.flip_h = direction < 0
 
 # Faz ela se mover
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity.x = SPEED * direction
 	move_and_slide()
 	

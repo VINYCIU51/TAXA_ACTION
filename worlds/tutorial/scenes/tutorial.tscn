@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctu2bgmcxsyxj"]
+
+[ext_resource type="PackedScene" uid="uid://d1ke2tjhu0in7" path="res://worlds/tutorial/assets/Background/Parallax caverna.tscn" id="1_23wv8"]
+[ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://worlds/tutorial/scenes/tutorial_map.tscn" id="2_a7h62"]
+[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_a7h62"]
+[ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://Interactables/next_level.tscn" id="4_23wv8"]
+[ext_resource type="PackedScene" uid="uid://dj41h6wqempxg" path="res://Collectibles/scenes/manopla.tscn" id="5_he8un"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23wv8"]
+size = Vector2(12, 1076)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="background cave" parent="." instance=ExtResource("1_23wv8")]
+position = Vector2(1238, -110)
+scale = Vector2(0.4, 0.4)
+
+[node name="TileMapLayer" parent="." instance=ExtResource("2_a7h62")]
+position = Vector2(-13, 55)
+scale = Vector2(0.6, 0.6)
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 2)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, -3)
+shape = SubResource("RectangleShape2D_23wv8")
+
+[node name="player" parent="." instance=ExtResource("3_a7h62")]
+position = Vector2(21, -92)
+
+[node name="NextLevel" parent="." instance=ExtResource("4_23wv8")]
+position = Vector2(2208, -95)
+scale = Vector2(3, 3)
+next_scene = "Level 1"
+
+[node name="Manopla" parent="." instance=ExtResource("5_he8un")]
+position = Vector2(285, 45)
+scale = Vector2(0.8, 0.8)
