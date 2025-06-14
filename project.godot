@@ -15,13 +15,12 @@ run/main_scene="uid://bqs06fiwy1f0e"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-config/icon="res://icon.svg"
 
 [autoload]
 
-GerenciadorDeCenas="*res://scripts/gerenciador_de_cenas.gd"
-UpgradeManager="*res://scripts/UpgradeManager.gd"
-LoadingScreen="*res://UI/Loading_screen/loading_screen.tscn"
+GerenciadorDeCenas="*res://scripts_globais/scripts/gerenciador_de_cenas.gd"
+UpgradeManager="*res://scripts_globais/scripts/UpgradeManager.gd"
+LoadingScreen="*res://UI/Loading_screen/scenes/loading_screen.tscn"
 
 [display]
 
