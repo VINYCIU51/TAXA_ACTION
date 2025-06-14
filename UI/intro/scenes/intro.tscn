@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqs06fiwy1f0e"]
 
 [ext_resource type="Script" uid="uid://dwoxooopu8u4a" path="res://UI/intro/scripts/intro.gd" id="1_47ffs"]
-[ext_resource type="Texture2D" uid="uid://cenqperkkjlk5" path="res://UI/intro/assets/Made With Godot Screen 1080p.png" id="2_1pwhu"]
+[ext_resource type="Texture2D" uid="uid://bejgeq3o7vxsh" path="res://UI/intro/assets/Made With Godot Screen 1080p.png" id="2_1pwhu"]
 
 [sub_resource type="Animation" id="Animation_aci8b"]
 length = 0.001
