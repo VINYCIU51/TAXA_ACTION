@@ -30,6 +30,8 @@ window/size/viewport_height=720
 [global_group]
 
 Player=""
+dangerous_bodys=""
+enemies=""
 
 [input]
 
@@ -70,8 +72,10 @@ pause={
 2d_physics/layer_2="world"
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="projectiles"
-2d_physics/layer_5="hitbox"
+2d_physics/layer_5="player_hitbox"
 2d_physics/layer_6="next_level"
+2d_physics/layer_7="enemies_hitbox"
+2d_physics/layer_8="dangerous_bodys"
 
 [rendering]
 

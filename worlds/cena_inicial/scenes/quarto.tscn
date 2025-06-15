@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b7m3nwa37xe6o" path="res://worlds/cena_inicial/scenes/parallax_quarto.tscn" id="1_tc1lh"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://Interactables/next_level.tscn" id="2_vbyns"]
-[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_vbyns"]
+[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="3_2yl00"]
 [ext_resource type="PackedScene" uid="uid://bsvxhobdh7503" path="res://worlds/cena_inicial/scenes/quarto_tilesets.tscn" id="4_pgbju"]
 
 [node name="Quarto" type="Node2D"]
@@ -16,8 +16,7 @@ position = Vector2(579, 47)
 scale = Vector2(2, 2)
 next_scene = "Level 2"
 
-[node name="player" parent="." instance=ExtResource("3_vbyns")]
-position = Vector2(26, -37)
+[node name="player" parent="." instance=ExtResource("3_2yl00")]
 
 [node name="QuartoTilesets" parent="." instance=ExtResource("4_pgbju")]
 position = Vector2(9, 82)
