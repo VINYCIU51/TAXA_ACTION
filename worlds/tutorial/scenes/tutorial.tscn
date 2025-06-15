@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctu2bgmcxsyxj"]
+[gd_scene load_steps=9 format=3 uid="uid://ctu2bgmcxsyxj"]
 
 [ext_resource type="PackedScene" uid="uid://d1ke2tjhu0in7" path="res://worlds/tutorial/assets/Background/Parallax caverna.tscn" id="1_23wv8"]
 [ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://worlds/tutorial/scenes/tutorial_map.tscn" id="2_a7h62"]
-[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/player.tscn" id="3_a7h62"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://Interactables/next_level.tscn" id="4_23wv8"]
+[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="5_12m6v"]
 [ext_resource type="PackedScene" uid="uid://dj41h6wqempxg" path="res://Collectibles/scenes/manopla.tscn" id="5_he8un"]
 [ext_resource type="PackedScene" uid="uid://cumeko2b8sngw" path="res://UI/pause/scenes/pausa.tscn" id="6_12m6v"]
+[ext_resource type="PackedScene" uid="uid://dsa5mmp1c38uu" path="res://atores/enemies/scenes/archer.tscn" id="6_ivaqi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23wv8"]
 size = Vector2(12, 1076)
@@ -29,9 +30,6 @@ collision_mask = 0
 position = Vector2(-6, -3)
 shape = SubResource("RectangleShape2D_23wv8")
 
-[node name="player" parent="." instance=ExtResource("3_a7h62")]
-position = Vector2(21, -92)
-
 [node name="NextLevel" parent="." instance=ExtResource("4_23wv8")]
 position = Vector2(2208, -95)
 scale = Vector2(3, 3)
@@ -40,6 +38,11 @@ next_scene = "Level 1"
 [node name="Manopla" parent="." instance=ExtResource("5_he8un")]
 position = Vector2(285, 45)
 scale = Vector2(0.8, 0.8)
+
+[node name="player" parent="." instance=ExtResource("5_12m6v")]
+
+[node name="archer" parent="." instance=ExtResource("6_ivaqi")]
+position = Vector2(865, -25)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

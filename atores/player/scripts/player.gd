@@ -1,8 +1,10 @@
+class_name Player
 extends CharacterBody2D
 
-@onready var animation := $animation as AnimationPlayer
-@onready var invencible_timer := $invencible_timer
+@onready var animation: AnimationPlayer = $body/animation
+@onready var invincible_timer := $invincible_timer
 @onready var blink_timer := $blink_timer
+@onready var dash_cooldown: Timer = $dash_cooldown
 
 const BULLET := preload("res://atores/player/projectiles/bullet.tscn")
 const SPEED := 200
@@ -22,167 +24,152 @@ var fall_gravity
 
 var direction = 0.0
 
-var is_dashing = false
-var is_invencible := false
-var taked_damage := false
+var can_dash := true
+var is_dashing := false
+var is_invincible := false
+var is_damaged := false
 var is_shooting := false
-var is_air_shooting := false
 var current_state := "idle"
 
 func _ready():
 	jump_velocity = (jump_height * 2) / time_to_top_height
 	gravity = (jump_height * 2) / pow(time_to_top_height, 2)
 	fall_gravity = gravity * 2
-	#add depois
-	#if UpgradeManager.upgrades["dash_enabled"]:
-		#enable_dash()
-	#if UpgradeManager.upgrades["shoot_enabled"]:
-		#enable_shoot()
-
-#func enable_dash():
-	#dash_active = true
-
-#func enable_shoot():
-	#shoot_active = true
 
 func _physics_process(delta):
-	if global_position.y > DEATH_HEIGHT:
-		fall_out()
+	# Variáveis que desbloqueiam com base nos upgrades coletados
+	var dash_active := UpgradeManager.dash_upgrated
+	var shoot_active := UpgradeManager.shoot_upgrated
 
+	if global_position.y > DEATH_HEIGHT:
+		fall_off_screen()
+
+	# Verifica a morte para nao realizar mais movimentos
 	if is_dead:
 		velocity.x = 0
+		velocity.y += fall_gravity * delta
+		move_and_slide()
 		set_state()
 		return
 
+	# Define a direcao com base no input
 	direction = Input.get_axis("move_left", "move_right")
 
-	if !taked_damage:
+	if !is_damaged:
 		velocity.x = direction * SPEED
 
-	if direction != 0 and !is_shooting and !is_air_shooting:
-		rotate_player(direction)
+	# rotaciona o sprite com base na direcao
+	if direction != 0 and !is_shooting:
+		flip_sprite(direction)
 
-	# Pulo
+	# pulo
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_velocity
 
-	# Gravidade
+	# diferentes gravidades com base no tempo de pressao do pulo
 	if !is_on_floor():
 		if Input.is_action_pressed("jump") and velocity.y < 0:
 			velocity.y += gravity * delta
 		else:
 			velocity.y += fall_gravity * delta
 
-	# Tiro no ar
-	if !is_on_floor() and Input.is_action_just_pressed("right_click")and !is_air_shooting:
-		is_air_shooting = true
-		shoot(sign($bullet_point.position.x), 0.3)
-
-	#adicionar dps
-	#if shoot_active == true and Input.is_action_just_pressed("right_click"):
-	
-	# Tiro no chão
-	if is_on_floor() and Input.is_action_just_pressed("right_click") and !is_shooting:
+	# tiro
+	if Input.is_action_just_pressed("right_click") and !is_shooting and shoot_active:
 		is_shooting = true
-		shoot(sign($bullet_point.position.x))
-	
-	#adicionar dps
-	#if dash_active == true and Input.is_action_just_pressed("dash"):
-		
-	if Input.is_action_just_pressed("dash") and direction != 0:
+
+	# dash
+	if Input.is_action_just_pressed("dash") and direction != 0 and can_dash and dash_active:
 		is_dashing = true
 		dash_timer = DASH_DURATION
-		
+
+	# validacoes de controle
 	if is_dashing:
-		velocity.x = direction * DASH_SPEED
+		dash()
 		dash_timer -= delta
-		is_invencible = true
-		
 		if dash_timer <= 0:
 			is_dashing = false
-			is_invencible = false
-		
-	#if is_dashing:
-		#if not animation.is_playing():
-			#is_dashing = false
-	
-	# Verifica o fim do tiro
-	if is_shooting:
-		if !animation.is_playing(): is_shooting = false
-	
-	# Verufica o fim do tiro aereo
-	if is_air_shooting:
-		if !animation.is_playing(): is_air_shooting = false
+			is_invincible = false
 
-	# Verifica fim de dano
-	if taked_damage:
-		knockback()
-		if !animation.is_playing(): taked_damage = false
+	if is_shooting and !animation.is_playing():
+		is_shooting = false
 
-	move_and_slide()
+	if is_damaged and !animation.is_playing():
+		is_damaged = false
+
 	set_state()
+	move_and_slide()
 
+# executa o dash
+func dash():
+	velocity.x = direction * DASH_SPEED
+	can_dash = false
+	is_invincible = true
+	dash_cooldown.start()
+
+# muda a animacao
 func set_state():
 	var new_state = "idle"
-
-	#if is_dead:
-		#new_state = "die"
-	#elif taked_damage:
-		#new_state = "hurt"
-	#elif is_attacking:
-		#new_state = "attack"
-	#elif is_shooting:
-		#new_state = "arrow"
-	#elif is_air_shooting:
-		#new_state = "air_arrow"
-	#elif !is_on_floor():
-		#new_state = "jump"
-	#elif direction != 0:
-		#new_state = "walk"
-
+	
+	if is_dead:
+		new_state = "die"
+	elif is_shooting:
+		new_state = "shoot"
+	elif is_damaged:
+		new_state = "hurt"
+		
 	if current_state != new_state:
 		animation.play(new_state)
 		current_state = new_state
 
-func fall_out():
+# Faz ele reaparecer ao cair dos limites da tela
+func fall_off_screen():
 	get_tree().reload_current_scene()
 
-func take_damage():
-	if is_invencible or is_dead: return
+# Efetua as verificações e ativações ao tomar um hit
+func take_damage(damage: int, enemie_position := Vector2.ZERO):
+	if is_invincible or is_dead:
+		return
 
-	taked_damage = true
-	invencible_mode()
-	life -= 1
+	is_damaged = true
+	knockback(enemie_position)
+	enable_invincibility()
+	life -= damage
 
-	if life <= 0: is_dead = true
+	if life <= 0:
+		is_dead = true
 
-func shoot(direct, time := 0.5):
-	await get_tree().create_timer(time).timeout
+# Efetua o disparo
+func shoot():
 	var bullet = BULLET.instantiate()
 	add_sibling(bullet, true)
+	var direct = sign($body.scale.x)
 	bullet.set_direction(direct)
-	bullet.position = $bullet_point.global_position
+	bullet.position = $body/bullet_point.global_position
 
-func rotate_player(direction):
-	$sprite.flip_h = direction < 0
-	if sign($bullet_point.position.x) != direction:
-		$bullet_point.position.x *= -1
+# Inverte a direção do sprite do personagem
+func flip_sprite(dir):
+	$body.scale.x = sign(dir)
 
-func knockback():
-	var knock_direction = 1 if $sprite.flip_h else -1
+# Faz o personagem ser lançado na direção oposta do inimigo que lhe feriu
+func knockback(dir):
+	var knock_direction = sign(global_position.x - dir.x)
 	velocity.x = knock_direction * 100
-		
-func invencible_mode():
-	is_invencible = true
-	set_collision_mask_value(3,false)
-	blink_timer.start()
-	invencible_timer.start()
 
-func _on_invencible_timer_timeout() -> void:
-	is_invencible = false
-	set_collision_mask_value(3,true)
+# Ativa o modo de invencibilidade permitindo o personagem andar sem tomar dano por um período
+func enable_invincibility():
+	is_invincible = true
+	set_collision_mask_value(3, false)
+	blink_timer.start()
+	invincible_timer.start()
+
+func _on_invincible_timer_timeout() -> void:
+	is_invincible = false
+	set_collision_mask_value(3, true)
 	blink_timer.stop()
-	$sprite.visible = true
+	$body/sprite.visible = true
 
 func _on_blink_timer_timeout() -> void:
-	$sprite.visible = !$sprite.visible
+	$body/sprite.visible = !$body/sprite.visible
+
+func _on_dash_cooldown_timeout() -> void:
+	can_dash = true

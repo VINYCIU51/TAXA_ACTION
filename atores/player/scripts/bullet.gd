@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-const SPEED := 300
+const SPEED := 500
 const DAMAGE := 1
 
 var direction := 1
 
-# Define a direçao da flecha
+# Define a direçao da bala
 func set_direction(direct):
 	direction = direct
 	$sprite.flip_h = direction < 0
