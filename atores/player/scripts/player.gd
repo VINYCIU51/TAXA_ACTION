@@ -7,16 +7,16 @@ extends CharacterBody2D
 @onready var dash_cooldown: Timer = $dash_cooldown
 
 const BULLET := preload("res://atores/player/projectiles/bullet.tscn")
-const SPEED := 200
+const SPEED := 150
 const DEATH_HEIGHT := 500
-const DASH_SPEED := 700
+const DASH_SPEED := 500
 const DASH_DURATION := 0.15
 
 var life := 3
 var is_dead := false
 
 var dash_timer := 0.0
-var jump_height := 96
+var jump_height := 90
 var time_to_top_height := 0.5
 var jump_velocity
 var gravity
