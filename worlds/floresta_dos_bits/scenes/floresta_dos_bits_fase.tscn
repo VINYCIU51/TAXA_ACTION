@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://be2tf2kbjw7hw"]
+
+[ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="1_5ejhk"]
+
+[node name="FlorestaDosBitsFase" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_5ejhk")]
+position = Vector2(8, -125)
