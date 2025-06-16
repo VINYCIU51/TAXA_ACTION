@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://sadfxtvrtov1"]
+
+[ext_resource type="Script" uid="uid://dfkm8312l2c47" path="res://atores/player/scripts/camera.gd" id="1_x50fy"]
+
+[node name="Camera2D" type="Camera2D"]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = -338
+limit_bottom = 180
+limit_smoothed = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.4
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("1_x50fy")

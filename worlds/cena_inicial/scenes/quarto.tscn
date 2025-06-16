@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjcyt6f466nit"]
+[gd_scene load_steps=6 format=3 uid="uid://cjcyt6f466nit"]
 
 [ext_resource type="PackedScene" uid="uid://b7m3nwa37xe6o" path="res://worlds/cena_inicial/scenes/parallax_quarto.tscn" id="1_tc1lh"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://Interactables/next_level.tscn" id="2_vbyns"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="3_2yl00"]
 [ext_resource type="PackedScene" uid="uid://bsvxhobdh7503" path="res://worlds/cena_inicial/scenes/quarto_tilesets.tscn" id="4_pgbju"]
+[ext_resource type="PackedScene" uid="uid://sadfxtvrtov1" path="res://atores/player/scenes/camera.tscn" id="5_fltad"]
 
 [node name="Quarto" type="Node2D"]
 
@@ -21,3 +22,8 @@ next_scene = "Level 2"
 [node name="QuartoTilesets" parent="." instance=ExtResource("4_pgbju")]
 position = Vector2(9, 82)
 scale = Vector2(1.2, 1.2)
+
+[node name="Camera2D" parent="." instance=ExtResource("5_fltad")]
+limit_top = -210
+limit_bottom = 105
+target_path = NodePath("../player")
