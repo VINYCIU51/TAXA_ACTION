@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://gkhbgo55eaaq"]
 
 [ext_resource type="Script" uid="uid://cfgvc2o2ynohg" path="res://atores/player/scripts/player.gd" id="1_f5d7h"]
-[ext_resource type="Texture2D" uid="uid://yfq5nxx1fjfd" path="res://atores/player/assets/idle.png" id="1_v76d8"]
+[ext_resource type="Texture2D" uid="uid://stmw7ntdn044" path="res://atores/player/assets/idle.png" id="1_v76d8"]
 [ext_resource type="PackedScene" uid="uid://bvc16rnjgni7o" path="res://atores/player/scenes/hurtbox.tscn" id="3_kddgo"]
 
 [sub_resource type="Animation" id="Animation_ya2v2"]
@@ -312,20 +312,6 @@ autoplay = "idle"
 
 [node name="bullet_point" type="Marker2D" parent="body"]
 position = Vector2(9, 2)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-5, -75)
-zoom = Vector2(2, 2)
-limit_left = 0
-limit_top = -338
-limit_bottom = 180
-limit_smoothed = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_top_margin = 0.4
-drag_bottom_margin = 0.4
-editor_draw_limits = true
-editor_draw_drag_margin = true
 
 [node name="hurtbox" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_kddgo")]
 position = Vector2(1, 2)
