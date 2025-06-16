@@ -313,6 +313,7 @@ autoplay = "idle"
 [node name="bullet_point" type="Marker2D" parent="body"]
 position = Vector2(9, 2)
 
+
 [node name="hurtbox" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_kddgo")]
 position = Vector2(1, 2)
 collision_layer = 16

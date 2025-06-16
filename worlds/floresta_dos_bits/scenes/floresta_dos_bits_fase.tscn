@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://be2tf2kbjw7hw"]
+[gd_scene load_steps=4 format=3 uid="uid://be2tf2kbjw7hw"]
 
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="1_5ejhk"]
+[ext_resource type="PackedScene" uid="uid://bvqwlgnfgfpju" path="res://worlds/floresta_dos_bits/scenes/tilesets_floresta_dos_bits.tscn" id="2_bks3q"]
+[ext_resource type="PackedScene" uid="uid://cfpc777ijmdli" path="res://worlds/floresta_dos_bits/scenes/parallax_floresta_dos_bits.tscn" id="3_h6dmd"]
 
 [node name="FlorestaDosBitsFase" type="Node2D"]
 
+[node name="ParallaxFlorestaDosBits" parent="." instance=ExtResource("3_h6dmd")]
+position = Vector2(2, -85)
+
 [node name="player" parent="." instance=ExtResource("1_5ejhk")]
 position = Vector2(8, -125)
+
+[node name="TilesetsFlorestaDosBits" parent="." instance=ExtResource("2_bks3q")]

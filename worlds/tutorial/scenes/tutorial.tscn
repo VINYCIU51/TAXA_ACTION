@@ -15,7 +15,7 @@ size = Vector2(12, 1076)
 [node name="Tutorial" type="Node2D"]
 
 [node name="background cave" parent="." instance=ExtResource("1_23wv8")]
-position = Vector2(1238, -110)
+position = Vector2(1238, -123)
 scale = Vector2(0.4, 0.4)
 
 [node name="TileMapLayer" parent="." instance=ExtResource("2_a7h62")]
