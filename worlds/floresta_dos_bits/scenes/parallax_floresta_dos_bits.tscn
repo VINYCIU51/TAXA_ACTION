@@ -7,11 +7,13 @@
 [node name="ParallaxFlorestaDosBits" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enabled = true
+scroll_ignore_camera_zoom = true
 
 [node name="fundo_mais distante" type="Parallax2D" parent="ParallaxBackground"]
 scroll_scale = Vector2(0.5, 0.5)
 repeat_size = Vector2(1600, 0)
-repeat_times = 3
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/fundo_mais distante"]
 texture = ExtResource("1_7mg3k")
@@ -19,14 +21,14 @@ texture = ExtResource("1_7mg3k")
 [node name="arvore_do_meio" type="Parallax2D" parent="ParallaxBackground"]
 scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(1600, 0)
-repeat_times = 3
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/arvore_do_meio"]
 texture = ExtResource("2_2pgyl")
 
 [node name="arvore_mais_perto" type="Parallax2D" parent="ParallaxBackground"]
 repeat_size = Vector2(1600, 0)
-repeat_times = 3
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/arvore_mais_perto"]
 texture = ExtResource("3_rgw0l")

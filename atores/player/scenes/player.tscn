@@ -314,10 +314,11 @@ autoplay = "idle"
 position = Vector2(9, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-5, -75)
+position = Vector2(-8, 17)
+ignore_rotation = false
 zoom = Vector2(2, 2)
-limit_left = 0
-limit_top = -338
+limit_left = -2
+limit_top = -341
 limit_bottom = 180
 limit_smoothed = true
 drag_horizontal_enabled = true
