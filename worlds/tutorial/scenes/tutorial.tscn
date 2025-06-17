@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctu2bgmcxsyxj"]
+[gd_scene load_steps=11 format=3 uid="uid://ctu2bgmcxsyxj"]
 
 [ext_resource type="PackedScene" uid="uid://d1ke2tjhu0in7" path="res://worlds/tutorial/assets/Background/Parallax caverna.tscn" id="1_23wv8"]
 [ext_resource type="PackedScene" uid="uid://dfogf5rl7umr5" path="res://worlds/tutorial/scenes/tutorial_map.tscn" id="2_a7h62"]
 [ext_resource type="PackedScene" uid="uid://cnovmkdccmvx8" path="res://Interactables/next_level.tscn" id="4_23wv8"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="5_12m6v"]
-[ext_resource type="PackedScene" uid="uid://dj41h6wqempxg" path="res://Collectibles/scenes/manopla.tscn" id="5_he8un"]
+[ext_resource type="PackedScene" uid="uid://dj41h6wqempxg" path="res://Interactables/manopla.tscn" id="5_he8un"]
 [ext_resource type="PackedScene" uid="uid://cumeko2b8sngw" path="res://UI/pause/scenes/pausa.tscn" id="6_12m6v"]
 [ext_resource type="PackedScene" uid="uid://dsa5mmp1c38uu" path="res://atores/enemies/scenes/archer.tscn" id="6_ivaqi"]
 [ext_resource type="PackedScene" uid="uid://sadfxtvrtov1" path="res://atores/player/scenes/camera.tscn" id="7_h8t7h"]
+[ext_resource type="AudioStream" uid="uid://x7lfjbvkjyc7" path="res://audios/pressure.mp3" id="9_siuml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23wv8"]
 size = Vector2(12, 1076)
@@ -54,3 +55,8 @@ target_path = NodePath("../player")
 
 [node name="pausa" parent="CanvasLayer" instance=ExtResource("6_12m6v")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_siuml")
+volume_db = -13.117
+autoplay = true

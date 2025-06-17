@@ -1,23 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj41h6wqempxg"]
+[gd_scene load_steps=5 format=3 uid="uid://dj41h6wqempxg"]
 
-[ext_resource type="Script" uid="uid://dhqqaduy3dl15" path="res://Collectibles/scripts/manopla.gd" id="1_1c1f6"]
-[ext_resource type="Texture2D" uid="uid://cpihjen3o53u7" path="res://Collectibles/assets/Item__62.png" id="2_sjujl"]
+[ext_resource type="Script" uid="uid://dhqqaduy3dl15" path="res://Collectibles/scripts/manopla.gd" id="1_mqdqj"]
+[ext_resource type="Texture2D" uid="uid://4eu34vs3y6cr" path="res://Collectibles/assets/Item__62.png" id="2_wjx2u"]
+[ext_resource type="AudioStream" uid="uid://dlufd3bq2je3l" path="res://audios/joia_coletada_jogador.mp3" id="3_tjfyd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjujl"]
 radius = 11.0
 height = 24.0
 
 [node name="Manopla" type="Node2D"]
-script = ExtResource("1_1c1f6")
+script = ExtResource("1_mqdqj")
 
 [node name="manopla_sprite" type="Sprite2D" parent="."]
 scale = Vector2(1.1875, 1.1875)
-texture = ExtResource("2_sjujl")
+texture = ExtResource("2_wjx2u")
 
 [node name="manopla" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="manopla"]
 shape = SubResource("CapsuleShape2D_sjujl")
+
+[node name="coleta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tjfyd")
 
 [connection signal="body_entered" from="manopla" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="manopla" to="." method="_on_manopla_body_entered"]

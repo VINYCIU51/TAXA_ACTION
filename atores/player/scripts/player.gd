@@ -5,6 +5,9 @@ extends CharacterBody2D
 @onready var invincible_timer := $invincible_timer
 @onready var blink_timer := $blink_timer
 @onready var dash_cooldown: Timer = $dash_cooldown
+@onready var audio = $audio as AudioStreamPlayer
+@onready var morte = $morte as AudioStreamPlayer
+
 
 const BULLET := preload("res://atores/player/projectiles/bullet.tscn")
 const SPEED := 150
@@ -65,13 +68,15 @@ func _physics_process(delta):
 	# pulo
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_velocity
-
+		audio.play()
+	 	
 	# diferentes gravidades com base no tempo de pressao do pulo
 	if !is_on_floor():
 		if Input.is_action_pressed("jump") and velocity.y < 0:
 			velocity.y += gravity * delta
 		else:
 			velocity.y += fall_gravity * delta
+			
 
 	# tiro
 	if Input.is_action_just_pressed("right_click") and !is_shooting and shoot_active:
@@ -122,7 +127,7 @@ func set_state():
 		current_state = new_state
 
 # Faz ele reaparecer ao cair dos limites da tela
-func fall_off_screen():
+func fall_off_screen(): 
 	get_tree().reload_current_scene()
 
 # Efetua as verificações e ativações ao tomar um hit
