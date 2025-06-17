@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=4 uid="uid://bvqwlgnfgfpju"]
 
-[ext_resource type="Texture2D" uid="uid://dff5fmhd24eut" path="res://worlds/floresta_dos_bits/assets/tilesets/Terrain_and_Props.png" id="1_yvm3b"]
+[ext_resource type="Texture2D" uid="uid://chcni3o6ijmea" path="res://worlds/floresta_dos_bits/assets/tilesets/Terrain_and_Props.png" id="1_yvm3b"]
 [ext_resource type="PackedScene" uid="uid://gkhbgo55eaaq" path="res://atores/player/scenes/player.tscn" id="2_cctr7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h1qm6"]
