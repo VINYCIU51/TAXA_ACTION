@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://dsa5mmp1c38uu"]
 
 [ext_resource type="Script" uid="uid://bwctrsvnnfhqk" path="res://atores/enemies/scripts/archer.gd" id="1_3dmky"]
-[ext_resource type="Texture2D" uid="uid://iwqu3n5jh2p6" path="res://atores/enemies/assets/archer/spritesheet.png" id="2_wo8kq"]
+[ext_resource type="Texture2D" uid="uid://doo23nryjj6pm" path="res://atores/enemies/assets/archer/spritesheet.png" id="2_wo8kq"]
 [ext_resource type="PackedScene" uid="uid://c8sq7lewhrilo" path="res://atores/enemies/scenes/hitbox.tscn" id="3_s50rd"]
-[ext_resource type="AudioStream" uid="uid://o0auwjapwtgv" path="res://audios/flexa.mp3" id="4_wo8kq"]
+[ext_resource type="AudioStream" uid="uid://b33beikb1ucw7" path="res://audios/flexa.mp3" id="4_wo8kq"]
 
 [sub_resource type="Animation" id="Animation_2spqa"]
 length = 0.001

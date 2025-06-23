@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://tdhxxjr7g8ni"]
+
+[node name="FastShooter" type="CharacterBody2D"]
+
+[node name="body" type="Node2D" parent="."]
+
+[node name="sprit" type="Sprite2D" parent="body"]
+
+[node name="animation" type="AnimationPlayer" parent="body"]
+
+[node name="shoot_point" type="Marker2D" parent="body"]
+
+[node name="floor_edge" type="RayCast2D" parent="body"]
+
+[node name="step_ahead" type="RayCast2D" parent="body"]
+
+[node name="jump_clear" type="RayCast2D" parent="body"]
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="hit_collision" type="CollisionShape2D" parent="hitbox"]
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+[node name="flechas" type="AudioStreamPlayer2D" parent="."]

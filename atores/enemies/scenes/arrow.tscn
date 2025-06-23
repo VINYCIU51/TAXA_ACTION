@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://85ddmla8trdo"]
 
-[ext_resource type="Texture2D" uid="uid://bsxhgekn472yw" path="res://atores/enemies/assets/archer/projectile.png" id="1_525da"]
+[ext_resource type="Texture2D" uid="uid://btrreg478bde0" path="res://atores/enemies/assets/archer/projectile.png" id="1_525da"]
 [ext_resource type="Script" uid="uid://vk4ceyhri51q" path="res://atores/enemies/scripts/arrow.gd" id="1_sg388"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57s0u"]
